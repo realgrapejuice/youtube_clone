@@ -3,12 +3,9 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-const app = express();
+import { userRouter } from "./router";
 
-const PORT = 4000;
-const handleListening = () => {
-  console.log("Listening on: http://localhost:4000");
-};
+const app = express();
 
 const handleHome = (req, res) => {
   res.send("Hello from home");
@@ -28,4 +25,7 @@ app.get("/", handleHome);
 
 app.get("/profile", handleProfile);
 
-app.listen(PORT, handleListening);
+// use를 사용해 router middleware를 호출해준 뒤 경로에 맞는 함수를 실행
+app.use("/user", userRouter);
+
+export default app;
