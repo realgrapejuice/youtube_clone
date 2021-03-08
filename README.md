@@ -9,8 +9,8 @@ Youtube Clone with vanilaJS and nodeJS
 - [x] Login
 - [x] Search
 - [ ] User Detail
-- [ ] Edit Profile
-- [ ] Change Password
-- [ ] Upload Video
+- [x] Edit Profile
+- [x] Change Password
+- [x] Upload Video
 - [ ] Video Detail
-- [ ] Edit Video
+- [x] Edit Video
